@@ -1,0 +1,12 @@
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,15710)
+	Variable.passed.000020.set("Prnt Lbls")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.End
+
+Program.Sub.Main.End
