@@ -1,0 +1,452 @@
+Program.Sub.ScreenSU.Start
+Gui.fmMain..Create
+Gui.fmMain..Size(7830,4275)
+Gui.fmMain..MinX(0)
+Gui.fmMain..MinY(0)
+Gui.fmMain..Position(0,0)
+Gui.fmMain..BackColor(-2147483633)
+Gui.fmMain..MousePointer(0)
+Gui.fmMain..Caption("Please choose the labels needed below")
+Gui.fmMain..Event(UnLoad,fmMain_UnLoad)
+Gui.fmMain.cmdPNBrw.Create(Button)
+Gui.fmMain.cmdPNBrw.Size(855,375)
+Gui.fmMain.cmdPNBrw.Position(2715,270)
+Gui.fmMain.cmdPNBrw.Caption("^")
+Gui.fmMain.cmdPNBrw.FontStyle(True,False,False,False,False)
+Gui.fmMain.cmdPNBrw.Event(Click,cmdPNBrw_Click)
+Gui.fmMain.txtPN.Create(TextBox,"",True,2535,300,0,150,315,False,0,"Arial",8,-2147483643,1)
+Gui.fmMain.txtPN.DefaultValue("")
+Gui.fmMain.txtPN.ControlGroup(1)
+Gui.fmMain.lblPN.Create(Label,"Part Number",True,1935,255,0,150,105,True,0,"Arial",8,-2147483633,0)
+Gui.fmMain.lblPN.FontStyle(True,False,False,False,False)
+Gui.fmMain.cmdPrnt.Create(Button)
+Gui.fmMain.cmdPrnt.Size(1320,795)
+Gui.fmMain.cmdPrnt.Position(6180,2940)
+Gui.fmMain.cmdPrnt.Caption("PRINT")
+Gui.fmMain.cmdPrnt.FontStyle(True,False,False,False,False)
+Gui.fmMain.cmdPrnt.Event(Click,cmdPrnt_Click)
+Gui.fmMain.cmdPrnt.FontSize(16)
+Gui.fmMain.txtPrice.Create(TextBox,"",True,1215,300,0,150,930,True,0,"Arial",8,-2147483643,1)
+Gui.fmMain.txtPrice.DefaultValue("")
+Gui.fmMain.txtPrice.ControlGroup(1)
+Gui.fmMain.lblPrice.Create(Label,"Price",True,1200,255,0,150,720,True,0,"Arial",8,-2147483633,0)
+Gui.fmMain.lblPrice.FontStyle(True,False,False,False,False)
+Gui.fmMain.txtWO.Create(TextBox,"",True,1215,300,0,1395,930,True,0,"Arial",8,-2147483643,1)
+Gui.fmMain.txtWO.DefaultValue("")
+Gui.fmMain.txtWO.ControlGroup(1)
+Gui.fmMain.lblWO.Create(Label,"Work Order #",True,1305,255,0,1395,720,True,0,"Arial",8,-2147483633,0)
+Gui.fmMain.lblWO.FontStyle(True,False,False,False,False)
+Gui.fmMain.txtDesc.Create(TextBox,"",True,3255,300,0,4230,315,False,0,"Arial",8,-2147483643,1)
+Gui.fmMain.txtDesc.DefaultValue("")
+Gui.fmMain.txtDesc.ControlGroup(1)
+Gui.fmMain.lblDesc.Create(Label,"Description",True,1935,255,0,4230,105,True,0,"Arial",8,-2147483633,0)
+Gui.fmMain.lblDesc.FontStyle(True,False,False,False,False)
+Gui.fmMain.txtLoc.Create(TextBox,"",True,570,300,0,3600,315,False,0,"Arial",8,-2147483643,1)
+Gui.fmMain.txtLoc.DefaultValue("")
+Gui.fmMain.txtLoc.ControlGroup(1)
+Gui.fmMain.lblLoc.Create(Label,"Loc",True,570,255,0,3615,105,True,0,"Arial",8,-2147483633,0)
+Gui.fmMain.lblLoc.FontStyle(True,False,False,False,False)
+Gui.fmMain.frmMain.Create(Frame)
+Gui.fmMain.frmMain.Size(5865,2460)
+Gui.fmMain.frmMain.Position(150,1275)
+Gui.fmMain.cboAcad.Create(ComboBox)
+Gui.fmMain.cboAcad.Size(2805,330)
+Gui.fmMain.cboAcad.Position(2970,465)
+Gui.fmMain.cboAcad.Parent("frmMain")
+Gui.fmMain.cboAcad.DefaultValue("")
+Gui.fmMain.cboAcad.ControlGroup(1)
+Gui.fmMain.txtAcadQty.Create(TextBox,"",True,1215,300,0,1500,465,True,2,"Arial",8,-2147483643,1)
+Gui.fmMain.txtAcadQty.Parent("frmMain")
+Gui.fmMain.txtAcadQty.DefaultValue("")
+Gui.fmMain.txtAcadQty.ControlGroup(1)
+Gui.fmMain.chkAcad.Create(CheckBox)
+Gui.fmMain.chkAcad.Size(1395,300)
+Gui.fmMain.chkAcad.Position(60,465)
+Gui.fmMain.chkAcad.Caption("Academic")
+Gui.fmMain.chkAcad.FontStyle(True,False,False,False,False)
+Gui.fmMain.chkAcad.Parent("frmMain")
+Gui.fmMain.chkAcad.ControlGroup(1)
+Gui.fmMain.chkBox4x6.Create(CheckBox)
+Gui.fmMain.chkBox4x6.Size(1305,300)
+Gui.fmMain.chkBox4x6.Position(60,1215)
+Gui.fmMain.chkBox4x6.Caption("Box4x6")
+Gui.fmMain.chkBox4x6.FontStyle(True,False,False,False,False)
+Gui.fmMain.chkBox4x6.Parent("frmMain")
+Gui.fmMain.chkBox4x6.ControlGroup(1)
+Gui.fmMain.txtBox4x6Qty.Create(TextBox,"",True,1215,300,0,1500,1215,True,2,"Arial",8,-2147483643,1)
+Gui.fmMain.txtBox4x6Qty.Parent("frmMain")
+Gui.fmMain.txtBox4x6Qty.DefaultValue("")
+Gui.fmMain.txtBox4x6Qty.ControlGroup(1)
+Gui.fmMain.cboBox4x6.Create(ComboBox)
+Gui.fmMain.cboBox4x6.Size(2805,330)
+Gui.fmMain.cboBox4x6.Position(2970,1215)
+Gui.fmMain.cboBox4x6.Parent("frmMain")
+Gui.fmMain.cboBox4x6.DefaultValue("")
+Gui.fmMain.cboBox4x6.ControlGroup(1)
+Gui.fmMain.cboBox2x6.Create(ComboBox)
+Gui.fmMain.cboBox2x6.Size(2805,330)
+Gui.fmMain.cboBox2x6.Position(2970,840)
+Gui.fmMain.cboBox2x6.Parent("frmMain")
+Gui.fmMain.cboBox2x6.DefaultValue("")
+Gui.fmMain.cboBox2x6.ControlGroup(1)
+Gui.fmMain.txtBox2x6Qty.Create(TextBox,"",True,1215,300,0,1500,840,True,2,"Arial",8,-2147483643,1)
+Gui.fmMain.txtBox2x6Qty.Parent("frmMain")
+Gui.fmMain.txtBox2x6Qty.DefaultValue("")
+Gui.fmMain.txtBox2x6Qty.ControlGroup(1)
+Gui.fmMain.chkBox2x6.Create(CheckBox)
+Gui.fmMain.chkBox2x6.Size(1320,300)
+Gui.fmMain.chkBox2x6.Position(60,840)
+Gui.fmMain.chkBox2x6.Caption("Box2x6")
+Gui.fmMain.chkBox2x6.FontStyle(True,False,False,False,False)
+Gui.fmMain.chkBox2x6.Parent("frmMain")
+Gui.fmMain.chkBox2x6.ControlGroup(1)
+Gui.fmMain.chkBookpkg.Create(CheckBox)
+Gui.fmMain.chkBookpkg.Size(1350,300)
+Gui.fmMain.chkBookpkg.Position(60,1590)
+Gui.fmMain.chkBookpkg.Caption("Bookpkg")
+Gui.fmMain.chkBookpkg.FontStyle(True,False,False,False,False)
+Gui.fmMain.chkBookpkg.Parent("frmMain")
+Gui.fmMain.chkBookpkg.ControlGroup(1)
+Gui.fmMain.txtBookpkgQty.Create(TextBox,"",True,1215,300,0,1500,1590,True,2,"Arial",8,-2147483643,1)
+Gui.fmMain.txtBookpkgQty.Parent("frmMain")
+Gui.fmMain.txtBookpkgQty.DefaultValue("")
+Gui.fmMain.txtBookpkgQty.ControlGroup(1)
+Gui.fmMain.cboBookpkg.Create(ComboBox)
+Gui.fmMain.cboBookpkg.Size(2805,330)
+Gui.fmMain.cboBookpkg.Position(2970,1590)
+Gui.fmMain.cboBookpkg.Parent("frmMain")
+Gui.fmMain.cboBookpkg.DefaultValue("")
+Gui.fmMain.cboBookpkg.ControlGroup(1)
+Gui.fmMain.cboFold.Create(ComboBox)
+Gui.fmMain.cboFold.Size(2805,330)
+Gui.fmMain.cboFold.Position(2970,1980)
+Gui.fmMain.cboFold.Parent("frmMain")
+Gui.fmMain.cboFold.DefaultValue("  ")
+Gui.fmMain.cboFold.ControlGroup(1)
+Gui.fmMain.txtFoldQty.Create(TextBox,"",True,1215,300,0,1500,1980,True,2,"Arial",8,-2147483643,1)
+Gui.fmMain.txtFoldQty.Parent("frmMain")
+Gui.fmMain.txtFoldQty.DefaultValue("")
+Gui.fmMain.txtFoldQty.ControlGroup(1)
+Gui.fmMain.chkFold.Create(CheckBox)
+Gui.fmMain.chkFold.Size(1290,300)
+Gui.fmMain.chkFold.Position(60,1980)
+Gui.fmMain.chkFold.Caption("Folding")
+Gui.fmMain.chkFold.FontStyle(True,False,False,False,False)
+Gui.fmMain.chkFold.Parent("frmMain")
+Gui.fmMain.chkFold.ControlGroup(1)
+Gui.fmMain.lblReq.Create(Label,"Label",True,1290,255,0,60,210,True,0,"Arial",8,-2147483633,0)
+Gui.fmMain.lblReq.FontStyle(True,False,False,False,False)
+Gui.fmMain.lblReq.Parent("frmMain")
+Gui.fmMain.lblQty.Create(Label,"Lbl Qty Req",True,1095,255,0,1500,210,True,0,"Arial",8,-2147483633,0)
+Gui.fmMain.lblQty.FontStyle(True,False,False,False,False)
+Gui.fmMain.lblQty.Parent("frmMain")
+Gui.fmMain.lblPrinter.Create(Label,"Printer",True,1935,255,0,2970,210,True,0,"Arial",8,-2147483633,0)
+Gui.fmMain.lblPrinter.FontStyle(True,False,False,False,False)
+Gui.fmMain.lblPrinter.Parent("frmMain")
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.Try
+V.Local.sSQL.Declare
+V.Local.sSent.Declare
+
+F.Intrinsic.UI.SetBrowserOOT(True)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.Control.CallSub(SetIcon)
+
+F.ODBC.Connection!comm.OpenCommonConnection
+
+F.Intrinsic.String.Build("Select PRID,SENTINELALIAS from SERVER_PRINTERS where SENTINELENABLED = 1","",V.Local.sSQL)
+F.ODBC.Connection!comm.ExecuteAndReturn(V.Local.sSQL,V.Local.sSent)
+
+F.Intrinsic.Control.If(V.Local.sSent.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Sentinel not running. Please contact your administrator","Error!")
+	F.ODBC.Connection!comm.Close
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndIf
+
+F.Data.Dictionary.CreateFromSQL("dictPrinters","comm",V.Local.sSQL)
+
+F.ODBC.Connection!comm.Close
+
+Gui.fmMain.cboAcad.AddItems("Dictionary","dictPrinters")
+Gui.fmMain.cboBookpkg.AddItems("Dictionary","dictPrinters")
+Gui.fmMain.cboBox2x6.AddItems("Dictionary","dictPrinters")
+Gui.fmMain.cboBox4x6.AddItems("Dictionary","dictPrinters")
+Gui.fmMain.cboFold.AddItems("Dictionary","dictPrinters")
+
+F.Data.Dictionary.Close("dictPrinters")
+
+Gui.fmMain..Show
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.cmdPNBrw_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sRet.Declare
+
+F.Intrinsic.UI.Browser(105,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+Gui.fmMain.txtPN.Text(V.Local.sRet(0).Trim)
+Gui.fmMain.txtLoc.Text(V.Local.sRet(1).Trim)
+Gui.fmMain.txtDesc.Text(V.Local.sRet(2).Trim)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdPNBrw_Click.End
+
+Program.Sub.cmdPrnt_Click.Start
+F.Intrinsic.Control.Try
+V.Local.iFoldQty.Declare
+V.Local.iBookQty.Declare
+V.Local.iBox2x6Qty.Declare
+V.Local.iBox4x6Qty.Declare
+V.Local.iAcadQty.Declare
+V.Local.sPN.Declare
+V.Local.sLOC.Declare
+V.Local.fPrice.Declare
+V.Local.sWO.Declare
+V.Local.sDesc.Declare
+V.Local.sFoldPrnt.Declare
+V.Local.sBookPrnt.Declare
+V.Local.sBox2x6Prnt.Declare
+V.Local.sBox4x6Prnt.Declare
+V.Local.sAcadPrnt.Declare
+V.Local.sSQL.Declare
+V.Local.sMSG.Declare
+V.Local.sIndBC.Declare
+V.Local.sPackBC.Declare
+V.Local.sCartBC.Declare
+V.Local.sPallBC.Declare
+V.Local.iFoldRptID.Declare
+V.Local.iBookRptID.Declare
+V.Local.iBox2x6RptID.Declare
+V.Local.iBox4x6RptID.Declare
+V.Local.iAcadRptID.Declare
+V.Local.sHeaders.Declare
+V.Local.sValues.Declare
+V.Local.iQtyOrd.Declare
+V.Local.iQtyMax.Declare
+V.Local.sTextInfo.Declare
+V.Local.iRet.Declare
+
+V.Local.iFoldQty.Set(V.Screen.fmMain!txtFoldQty.Text.Long)
+V.Local.iBookQty.Set(V.Screen.fmMain!txtBookpkgQty.Text.Trim)
+V.Local.iBox2x6Qty.Set(V.Screen.fmMain!txtBox2x6Qty.Text.Trim)
+V.Local.iBox4x6Qty.Set(V.Screen.fmMain!txtBox4x6Qty.Text.Trim)
+V.Local.iAcadQty.Set(V.Screen.fmMain!txtAcadQty.Text.Trim)
+V.Local.sPN.Set(V.Screen.fmMain!txtPN.Text.Trim)
+V.Local.sLOC.Set(V.Screen.fmMain!txtLoc.Text.Trim)
+V.Local.fPrice.Set(V.Screen.fmMain!txtPrice.Text.Trim)
+V.Local.sWO.Set(V.Screen.fmMain!txtWO.Text.Trim)
+V.Local.sDesc.Set(V.Screen.fmMain!txtDesc.Text.Trim)
+V.Local.sFoldPrnt.Set(V.Screen.fmMain!cboFold.Value)
+V.Local.sBookPrnt.Set(V.Screen.fmMain!cboBookpkg.Value)
+V.Local.sBox2x6Prnt.Set(V.Screen.fmMain!cboBox2x6.Value)
+V.Local.sBox4x6Prnt.Set(V.Screen.fmMain!cboBox4x6.Value)
+V.Local.sAcadPrnt.Set(V.Screen.fmMain!cboAcad.Value)
+
+F.Intrinsic.Control.If(V.Local.sPN.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please select a part number","Error")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conts.OpenCompanyConnection
+
+F.Intrinsic.String.Build("Select INDIVIDUAL_BC,PACKAGE_BC,CARTON_BC,PALLET_BC from ATG_BARCODES where PART = '{0}' and LOCN = '{1}'",V.Local.sPN.Trim,V.Local.sLOC.Trim,V.Local.sSQL)
+F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+
+F.Intrinsic.Control.If(V.Local.sSQL.Trim,=,"")
+	F.Intrinsic.String.Build("Barcodes not available for this part number.{0}Printing halted",V.Ambient.NewLine,V.Local.sMSG)
+	F.Intrinsic.UI.Msgbox(V.Local.sMSG,"Warning")
+	F.ODBC.Connection!conts.Close
+	F.Intrinsic.Control.ExitSub	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.InvokeWaitDialog("Please wait","Working")
+
+F.Intrinsic.String.Split(V.Local.sSQL,"*!*",V.Local.sSQL)
+
+V.Local.sIndBC.Set(V.Local.sSQL(0))
+V.Local.sPackBC.Set(V.Local.sSQL(1))
+V.Local.sCartBC.Set(V.Local.sSQL(2))
+V.Local.sPallBC.Set(V.Local.sSQL(3))
+
+F.Intrinsic.String.Build("select A.QTY_ORDER,B.QTY_MAXIMUM,B.TEXT_INFO2 from V_INVENTORY_MSTR A left join V_INVENTORY_MST2 B on A.PART = B.PART and A.LOCATION = B.LOCATION where A.PART = '{0}' and A.LOCATION = '{1}';",V.Local.sPN.Trim,V.Local.sLOC.Trim,V.Local.sSQL)
+F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+F.Intrinsic.String.Split(V.Local.sSQL,"*!*",V.Local.sSQL)
+
+V.Local.iQtyOrd.Set(V.Local.sSQL(0))
+V.Local.iQtyMax.Set(V.Local.sSQL(1))
+V.Local.sTextInfo.Set(V.Local.sSQL(2))
+
+F.ODBC.Connection!conts.Close
+
+F.Intrinsic.Control.If(V.Screen.fmMain!chkFold.CheckedAsBoolean)
+	F.Intrinsic.Control.If(V.Local.iFoldQty,=,0,"OR",V.Local.sFoldPrnt.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please include a label quantity and printer for Folding label","Error")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Global.BI.GetIDFromName("Folding Label SingleUPC_A.lab",V.Local.iFoldRptID)
+	
+	V.Local.sHeaders.Set("PART*!*DESCRIPTION*!*INDIVIDUAL_BC")
+	F.Intrinsic.String.Build("{0}*!*{1}*!*{2}",V.Local.sPN.Trim,V.Local.sDesc.Trim,V.Local.sIndBC,V.Local.sValues)
+	
+	F.Intrinsic.String.Split(V.Local.sHeaders,"*!*",V.Local.sHeaders)
+	F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+	
+	F.Global.BI.PrintCodesoftLabel(V.Local.iFoldRptID,V.Local.sHeaders,V.Local.sValues,True,V.Local.sFoldPrnt,V.Local.iFoldQty)
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmMain!chkBookpkg.CheckedAsBoolean)
+	F.Intrinsic.Control.If(V.Local.iBookQty,=,0,"OR",V.Local.sBookPrnt.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please include a label quantity and printer for Bookpkg label","Error")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Global.BI.GetIDFromName("BookPkg.lab",V.Local.iBookRptID)
+	
+	V.Local.sHeaders.Set("PART*!*DESCRIPTION*!*PACKAGE_BC*!*QTY_ORDER")
+	F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}",V.Local.sPN.Trim,V.Local.sDesc.Trim,V.Local.sPackBC,V.Local.iQtyOrd,V.Local.sValues)
+	
+	F.Intrinsic.String.Split(V.Local.sHeaders,"*!*",V.Local.sHeaders)
+	F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+	
+	F.Global.BI.PrintCodesoftLabel(V.Local.iBookRptID,V.Local.sHeaders,V.Local.sValues,True,V.Local.sBookPrnt,V.Local.iBookQty)
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmMain!chkBox2x6.CheckedAsBoolean)
+	F.Intrinsic.Control.If(V.Local.iBox2x6Qty,=,0,"OR",V.Local.sBox2x6Prnt.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please include a label quantity and printer for Box2x6 label","Error")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Global.BI.GetIDFromName("Box.w.desc2X6.lab",V.Local.iBox2x6RptID)
+	
+	V.Local.sHeaders.Set("PART*!*DESCRIPTION*!*CARTON_BC*!*QTY_MAXIMUM*!*LOT*!*TEXT_INFO2")
+	F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}",V.Local.sPN.Trim,V.Local.sDesc.Trim,V.Local.sCartBC,V.Local.iQtyMax,V.Local.sWO.PSQLFriendly,V.Local.sTextInfo,V.Local.sValues)
+	
+	F.Intrinsic.String.Split(V.Local.sHeaders,"*!*",V.Local.sHeaders)
+	F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+	
+	F.Global.BI.PrintCodesoftLabel(V.Local.iBox2x6RptID,V.Local.sHeaders,V.Local.sValues,True,V.Local.sBookPrnt,V.Local.iBox2x6Qty)	
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmMain!chkBox4x6.CheckedAsBoolean)
+	F.Intrinsic.Control.If(V.Local.iBox4x6Qty,=,0,"OR",V.Local.sBox4x6Prnt.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please include a label quantity and printer for Box4x6 label","Error")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Global.BI.GetIDFromName("Box.w.desc4X6.lab",V.Local.iBox4x6RptID)
+	
+	V.Local.sHeaders.Set("PART*!*DESCRIPTION*!*CARTON_BC*!*QTY_MAXIMUM*!*LOT*!*TEXT_INFO2")
+	F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}",V.Local.sPN.Trim,V.Local.sDesc.Trim,V.Local.sCartBC,V.Local.iQtyMax,V.Local.sWO.PSQLFriendly,V.Local.sTextInfo,V.Local.sValues)
+	
+	F.Intrinsic.String.Split(V.Local.sHeaders,"*!*",V.Local.sHeaders)
+	F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+	
+	F.Global.BI.PrintCodesoftLabel(V.Local.iBox4x6RptID,V.Local.sHeaders,V.Local.sValues,True,V.Local.sBookPrnt,V.Local.iBox4x6Qty)	
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmMain!chkAcad.CheckedAsBoolean)
+	F.Intrinsic.Control.If(V.Local.iAcadQty,=,0,"OR",V.Local.sAcadPrnt.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please include a label quantity and printer for Academic label","Error")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Global.BI.GetIDFromName("ASI Single Label Academic$.lab",V.Local.iAcadRptID)
+	
+	V.Local.sHeaders.Set("PART*!*DESCRIPTION*!*INDIVIDUAL_BC*!*PRICE")
+	F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}",V.Local.sPN.Trim,V.Local.sDesc.Trim,V.Local.sIndBC,V.Local.fPrice,V.Local.sValues)
+	
+	F.Intrinsic.String.Split(V.Local.sHeaders,"*!*",V.Local.sHeaders)
+	F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+	
+	F.Global.BI.PrintCodesoftLabel(V.Local.iAcadRptID,V.Local.sHeaders,V.Local.sValues,True,V.Local.sBookPrnt,V.Local.iAcadQty)	
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.UI.Msgbox("Did all labels print correctly?","",4,V.Local.iRet)
+
+F.Intrinsic.Control.If(V.Local.iRet,=,6)
+	Gui.fmMain..ClearGroup(1)
+	Gui.fmMain.chkAcad.Value(0)
+	Gui.fmMain.chkBookpkg.Value(0)
+	Gui.fmMain.chkBox2x6.Value(0)
+	Gui.fmMain.chkBox4x6.Value(0)
+	Gui.fmMain.chkFold.Value(0)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdPrnt_Click.End
+
+Program.Sub.SetIcon.Start
+F.Intrinsic.Control.Try
+V.Local.sForm.Declare
+V.Local.bExists.Declare
+V.Local.sIcon.Declare
+V.Local.iCounter.Declare
+
+F.Intrinsic.String.Build("{0}\ART\gss2.ico",V.Caller.GlobalDir,v.Local.sIcon)
+F.Intrinsic.File.Exists(V.Local.sIcon, V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists.Not)
+    F.Intrinsic.String.Build("{0}\GAB\GAS\gss2.ico",V.Caller.PluginsDir,v.Local.sIcon)
+    F.Intrinsic.File.Exists(V.Local.sIcon, V.Local.bExists)
+    F.Intrinsic.Control.If(V.Local.bExists.Not)
+        F.Intrinsic.Control.ExitSub
+    F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.GetFormList(V.Local.sForm)
+F.Intrinsic.String.Split(V.Local.sForm, "*!*", V.Local.sForm)
+
+F.Intrinsic.Control.For(V.Local.iCounter, 0, V.Local.sForm.UBound, 1)
+    Gui.[V.Local.sForm(V.Local.iCounter)]..Icon(V.Local.sIcon)
+F.Intrinsic.Control.Next(V.Local.iCounter)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.SetIcon.End
+
+Program.Sub.fmMain_UnLoad.Start
+F.Intrinsic.Control.End
+Program.Sub.fmMain_UnLoad.End
+
+Program.Sub.Error.Start
+V.Local.sError.Declare
+V.Local.iRet.Declare
+V.Local.sSep.Declare
+
+F.Intrinsic.String.Build("-------------------------------------------------------------------------------------",,V.Local.sSep)
+F.Intrinsic.String.Build("({5}-{6}){0}{7}{0}Project: {4}{0}{7}{0}Sub: {1}{0}Error: {2}, {3}", V.Ambient.NewLine, V.Args.SubRoutine, V.Args.eNumber, V.Args.eDescription,V.Caller.ScriptFile,V.Ambient.Date, V.Ambient.Time,V.Local.sSep,V.Local.sError)
+F.Intrinsic.UI.Msgbox(V.Local.sError,"Error",V.Local.iRet)
+Program.Sub.Error.End
